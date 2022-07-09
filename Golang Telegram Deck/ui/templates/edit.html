@@ -1,0 +1,14 @@
+        <main><div class="main">
+            <div class="publish">
+                <form action="/edit" enctype="multipart/form-data" method="post">
+                    <img style=" -o-object-fit: cover;object-fit: cover;padding: 30px; margin: 0 auto; display: block;border-radius: 100%;width: 200px;height: 200px;" src="../../data/img/posts/{{.ContentID}}.jpg" alt="">
+                    <p style="padding-top: 20px;"><label for="title">Исправьте заголовок статьи: </label><input value="{{.Title}}" style="font-size: 20px; width: 60%; height: 50px; padding: 0 10px;" id="title" name="title" type="text"></p>
+                    <textarea style="margin-top: 20px; padding: 20px; font-family: 'Go'; font-size: 16px;"  name="content" id="content" cols="100" rows="25"> {{ .Content }} </textarea>
+                    <p><label for="date">Дата публикации</label><input style="margin: 20px 20px; padding: 10px;" id="date" type="datetime-local" name="date" value="{{.DateOfPublish}}"></p>
+                    <p><label for="image" style="margin-right: 20px; font-size: 14px;" >Выберите изображение:</label><input id="image" name="image" style="margin-top: 10px;" type="file"></p>
+                    <p><input style="cursor: pointer; margin: 10px 0;" class="button-post button-blue" type="submit"></p>
+                    <input type="hidden" name="contentID" value="{{.ContentID}}">
+                    <input type="hidden" name="userID" value="{{.UserID}}">
+                </form>
+            </div>
+        </div></main>

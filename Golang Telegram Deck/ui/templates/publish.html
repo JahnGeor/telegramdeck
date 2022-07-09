@@ -1,0 +1,13 @@
+        <main><div class="main">
+            <div class="publish">
+                <form action="/publish" enctype="multipart/form-data" method="post">
+                    <p style="padding-top: 20px;"><label for="title">Введите заголовок статьи: </label><input style="font-size: 20px; width: 60%; height: 50px; padding: 0 10px;" id="title" name="title" type="text"></p>
+                    <textarea style="margin-top: 20px; padding: 20px; font-family: 'Go'; font-size: 16px;" name="content" id="content" cols="100" rows="25"></textarea>
+                    <p><label for="image" style="margin-right: 20px; font-size: 14px;" >Выберите изображение:</label><input id="image" name="image" style="margin-top: 10px;" type="file"></p>
+                    <p><label for="date">Дата публикации</label><input style="margin: 20px 20px; padding: 10px;" id="date" type="datetime-local" name="date"></p>
+                    <p><input style="cursor: pointer; margin-bottom: 20px;" class="button-post button-blue" type="submit"></p>
+                </form>
+            </div>
+        </div></main>
+
+        

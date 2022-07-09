@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Deck</title>
+    <link rel="stylesheet" href="../static/css/style-login.css">
+    
+    <script src="../static/js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="header"><span class="logo-img"></span><span class="logo-text">Telegram Deck</span></div>
+    
+    <div class="contain">
+    <article class = "container">
+        <div class="block">
+            <section class="block__item block-item">
+                <h2 class="block-item__title">У вас уже есть аккаунт?</h2>
+                <button class="block-item__btn signin-btn">Войти</button>
+            </section>
+            <section class="block__item block-item">
+                <h2 class="block-item__title">У вас нет аккаунта?</h2>
+                <button class="block-item__btn signup-btn">Зарегистрироваться</button>
+            </section>
+
+        </div>
+
+        <div class="form-box">
+            <!-- Форма входа -->
+            <form action="/login" method="post" class="form form_signin">
+                <h3 class="form__title">Вход</h3>
+                <p>
+                    <input type="text" name="login" class="form__input" placeholder="Логин" /required>
+                </p>
+                <p>
+                    <input type="password" name="password" class="form__input" placeholder="Пароль" /required>
+                </p>
+                <p>
+                    <input type="submit" value="Войти" class="form__btn">
+
+                </p>
+
+            </form>
+            <!-- Форма регистрации -->
+            <form action="/register" enctype="multipart/form-data" class="form form_signup" method="post">
+                <h3 class="form__title">Регистрация</h3>
+                <p>
+                    <input type="text" style="padding: 3px;" name="login" class="form__input" placeholder="Логин" /required>
+                </p>
+                <p>
+                    <input type="text" style="padding: 3px;" name="firstname" class="form__input" placeholder="Имя" /required>
+                </p>
+                <p>
+                    <input type="text" style="padding: 3px;" name="lastname" class="form__input" placeholder="Фамилия" /required>
+                </p>
+                <p>
+                    <input type="text" style="padding: 3px;" name="token" class="form__input" placeholder="Токен" /required>
+                </p>
+                <p>
+                    <input type="email" style="padding: 3px;" name="email" class="form__input" placeholder="Email" /required>
+                </p>
+                <p>
+                    <input type="password" style="padding: 3px;" name="password" class="form__input" placeholder="Пароль" /required>
+                </p>
+                <p>
+                    <input type="password" style="padding: 3px;" class="form__input" placeholder="Подтвердите пароль" /required>
+                </p>
+                <p>
+                    <input type="date" style="padding: 3px;" name="date" class="form__input" placeholder="Пароль" /required>
+                </p>
+                <p><input id="image" name="image" style="margin-top: 0px;" type="file"></p>
+                <p>
+                    <input type="submit" value="Зарегистрироваться" class="form__btn form__btn_signup">
+                </p>
+            </form>
+        </div>
+
+    </article>
+</div>
+
+</body>
+</html>

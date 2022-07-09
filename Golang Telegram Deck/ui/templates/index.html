@@ -1,0 +1,50 @@
+
+        <main><div class="main">
+            <div class="main-items">
+                <div class="main-item" style="height: 600px;">
+                    <div class="main-item-header">
+                        <span>Мой профиль</span><a class="button-classic" href="/editprofile">Редактировать</a>
+                    </div>
+                    <div class="main-item-content">
+                        <img src="../static/img/icopro.jpg" alt=""> <!--Фото профиля-->
+                        <p>Имя пользователя: {{.DataUser.Username}}</p>
+                        <p>Имя: {{.DataUser.Firstname}}</p>
+                        <p>Фамилия: {{.DataUser.Lastname}}</p>
+                        <p>Email: {{.DataUser.Email}}</p>
+                        <p>Telegram-токен: {{.DataUser.TokenID}}</p>
+                        <p>Дата рождения: {{.DataUser.Date}}</p>
+                        <p>Количество публикаций: {{len .DataPosts}}</p>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <div class="main-item-header">
+                        <span>Мои публикации</span><a href="/posts" class="button-classic">Смотреть все</a>
+                    </div>
+                    <div class="main-item-content">
+                        {{ if .DataPosts}}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th id="table1">Название статьи</th>
+                                    <th id="table2">Дата публикации</th>
+                                    <th id="table3">Ссылка</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                                {{ range $id, $content := .DataPosts }}
+                                <tr>
+                                    <td id="table1">{{$content.Title}}</td>
+                                    <td id="table2">{{$content.DateOfPublish}}</td>
+                                    <td id="table3"><a href="/post?id={{$content.ContentID}}">Смотреть</a></td>
+                                </tr>
+                                {{ end }}
+                                {{ else }}
+                                <h4>Посты отсутствуют. Не хотите написать парочку?</h4>
+                                {{ end }}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div></main>

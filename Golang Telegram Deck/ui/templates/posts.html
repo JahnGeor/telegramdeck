@@ -1,0 +1,19 @@
+        <main><div class="main">
+            <div class="main-items main-items-posts">
+                {{range $id, $content := .DataPosts}}
+                <div class="main-item">
+                    <div class="main-item-header">
+                <a class="button-post button-blue" href="/post?id={{$content.ContentID}}">Смотреть</a>
+                <a class="button-post button-blue" href="/edit?id={{$content.ContentID}}">Редактировать</a>
+                <a class="button-post button-red" href="/delete?id={{$content.ContentID}}">Удалить</a>
+                    </div>
+                    <div class="main-item-content">
+                        <p>{{$content.Title}}</p>
+                        <p style="margin-top: 12px; font-size: 16px;">{{$content.DateOfCreation}}</p>
+                    </div>
+                </div>
+                {{end}}
+            
+
+            </div>
+        </div></main>

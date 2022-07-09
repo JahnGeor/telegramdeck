@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Deck</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <script src="../static/js/all.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header><div class="header">
+            <div class="logo">
+                <span class="logo_img"></span>
+                <span class="logo_text">Telegram Deck</span>
+            </div>
+            <ul class="nav">
+            <li class="nav-item"><a href="/">Мой профиль</a></li>
+            <li class="nav-item"><a href="/posts">Мои публикации</a></li>
+            <li class="nav-item"><a href="/help">Помощь</a></li>
+            <a class="nav-button "href="/publish">Опубликовать</a>
+            <a class="nav-button-logout button-red "href="/logout">Выйти</a>
+        </ul>
+        </div></header>
+       {{ yield }}
+        <footer><div class="footer">
+            <ul class="social">
+                <li class="social-item"><a href=""><i class="fa-brands fa-vk"></i></a></li>
+                <li class="social-item"><a href=""><i class="fa-brands fa-telegram"></i></i></a></li>
+                <li class="social-item"><a href=""><i class="fa-brands fa-github"></i></i></a></li>
+            </ul>
+        </div></footer>
+    </div>
+    
+</body>
+</html>
